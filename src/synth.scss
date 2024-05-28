@@ -1,0 +1,88 @@
+.synth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__controls {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__keyboard {
+      margin: 25px auto 0;
+    }
+  }
+
+  .section {
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 5px 10px 0px;
+    min-height: 152px;
+    margin: 10px;
+
+    &__label {
+      display: table;
+      position: relative;
+      top: -15px;
+      text-transform: uppercase;
+      font-size: 15px;
+      padding: 2px 5px;
+      background-color: #111;
+    }
+
+    &__octave-buttons .button {
+      font-size: 35px;
+      padding: 0 7px;
+    }
+
+    &__keyboard-visibility {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 860px) {
+    body {
+      height: 100vh;
+      // overflow: hidden;
+      width: 100vw;
+    }
+
+    .synth {
+      transform: rotate(90deg) scale(.8);
+      min-width: 125vh;
+      width: fit-content;
+
+      &__keyboard {
+        margin: 0;
+      }
+
+      &__container > * {
+        min-width: 840px;
+      }
+    }
+
+    .section__keyboard-visibility {
+      display: block;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #root {
+      // overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+}
