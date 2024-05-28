@@ -42,7 +42,6 @@ export const Synth = () => {
     const [isKeyboardView, setIsKeyboardView] = useState(false);
     const [scale] = useState<Record<string, number>[]>(initializeScale());
     const [synthEngine, setSynthEngine] = useState<SynthEngine>();
-    // let synthEngine: SynthEngine;
 
     useEffect(() => {
         synthEngine?.setWaveForm(waveForm);

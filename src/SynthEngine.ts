@@ -108,21 +108,9 @@ class SynthEngine {
     }
 
     initializeOscillatorNode() {
-      // const real = new Float32Array(2);
-      // const imag = new Float32Array(2);
-
-      // real[0] = 0;
-      // imag[0] = 0;
-      // real[1] = 1;
-      // imag[1] = 0;
-
-      // // create custom waveform
-      // const wave = this.audioContext.createPeriodicWave(real, imag, { disableNormalization: true });
-
       // create Oscillator node
       this.oscillatorNode = this.audioContext.createOscillator();
       // set custom wave type
-      // this.oscillatorNode.setPeriodicWave(wave);
       this.oscillatorNode.type = this.settings.oscillator.waveForm as OscillatorType;
       // set frequency value in hertz
       this.oscillatorNode.frequency.value = 440;
