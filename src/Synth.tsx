@@ -65,22 +65,22 @@ export const Synth = () => {
     }
 
     return (
-        <div className='synth'>
-            <div className='section section__keyboard-visibility'>
-            <span className='section__label'>View</span>
-            <Button
-                disabled={!isKeyboardView}
-                onClick={() => setIsKeyboardView(false)}
-            >
-                Controls
-            </Button>
-            <Button
-                disabled={isKeyboardView === true}
-                onClick={() => setIsKeyboardView(true)}
-            >
-                Keyboard
-            </Button>
-            </div>
+      <div className='synth'>
+        <div className='section section__keyboard-visibility'>
+          <span className='section__label'>View</span>
+          <Button
+              disabled={!isKeyboardView}
+              onClick={() => setIsKeyboardView(false)}
+          >
+              Controls
+          </Button>
+          <Button
+              disabled={isKeyboardView === true}
+              onClick={() => setIsKeyboardView(true)}
+          >
+              Keyboard
+          </Button>
+        </div>
         <div className='synth__container'>
           <div className={`flex justify-center ${isKeyboardView ? 'hidden' : ''}`}>
             <div className='synth__controls'>
